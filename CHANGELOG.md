@@ -1,6 +1,11 @@
 # Release Notes
 
-## [Unreleased](https://github.com/laravel/vite-plugin/compare/v1.1.1...1.x)
+## [Unreleased](https://github.com/laravel/vite-plugin/compare/v1.2.0...1.x)
+
+## [v1.2.0](https://github.com/laravel/vite-plugin/compare/v1.1.1...v1.2.0) - 2025-01-21
+
+* [1.x] Fix Invalid URL issue with Vite 6.0.9 by [@batinmustu](https://github.com/batinmustu) in https://github.com/laravel/vite-plugin/pull/317
+* [1.x] Add default CORS origins by [@timacdonald](https://github.com/timacdonald) in https://github.com/laravel/vite-plugin/pull/318
 
 ## [v1.1.1](https://github.com/laravel/vite-plugin/compare/v1.1.0...v1.1.1) - 2024-12-03
 
