@@ -151,7 +151,7 @@ function resolveLaravelPlugin(pluginConfig: Required<PluginConfig>): LaravelPlug
                     assetsInlineLimit: userConfig.build?.assetsInlineLimit ?? 0,
                 },
                 server: {
-                    origin: userConfig.server?.origin ?? '__laravel_vite_placeholder__',
+                    origin: userConfig.server?.origin ?? 'http://__laravel_vite_placeholder__.test',
                     ...(process.env.LARAVEL_SAIL ? {
                         host: userConfig.server?.host ?? '0.0.0.0',
                         port: userConfig.server?.port ?? (env.VITE_PORT ? parseInt(env.VITE_PORT) : 5173),
@@ -190,7 +190,7 @@ function resolveLaravelPlugin(pluginConfig: Required<PluginConfig>): LaravelPlug
         },
         transform(code) {
             if (resolvedConfig.command === 'serve') {
-                code = code.replace(/__laravel_vite_placeholder__/g, viteDevServerUrl)
+                code = code.replace(/http:\/\/__laravel_vite_placeholder__\.test/g, viteDevServerUrl)
 
                 return pluginConfig.transformOnServe(code, viteDevServerUrl)
             }
